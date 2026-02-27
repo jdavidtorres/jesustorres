@@ -72,7 +72,7 @@ const translations = {
           company: "EPAM Anywhere",
           period: "Mayo 2022 - Actualidad",
           description:
-            "Soporte y actualizacion de aplicaciones Dropwizard, migracion de Java 6 a Java 17, DevOps con Jenkins y Spinnaker, Docker y AWS RDS."
+            "Soporte y actualizacion de aplicaciones Dropwizard, migracion de Java 6 a Java 17. Implementacion de pipelines de datos con Kafka Connect para sincronizar y migrar bases de datos entre sistemas. DevOps con Jenkins y Spinnaker, Docker y AWS RDS."
         },
         {
           role: "Senior Back-End Developer",
@@ -205,7 +205,7 @@ const translations = {
           company: "EPAM Anywhere",
           period: "May 2022 - Present",
           description:
-            "Support and update Dropwizard applications, migration from Java 6 to Java 17, DevOps with Jenkins and Spinnaker, Docker and AWS RDS."
+            "Support and update Dropwizard applications, migration from Java 6 to Java 17. Set up Kafka Connect pipelines to sync and migrate databases across systems. DevOps with Jenkins and Spinnaker, Docker and AWS RDS."
         },
         {
           role: "Senior Back-End Developer",
