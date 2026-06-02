@@ -10,7 +10,7 @@ const translations = {
       viewWork: "Ver proyectos",
       contactMe: "Contactar",
       panelTitle: "Stack principal",
-      statYears: "Anos en desarrollo backend",
+      statYears: "Años en desarrollo backend",
       statApis: "APIs y servicios entregados",
       statUptime: "Objetivo de disponibilidad",
       stack: [
