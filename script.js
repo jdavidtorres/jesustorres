@@ -25,14 +25,14 @@ const translations = {
       ]
     },
     skills: {
-      title: "Habilidades tecnicas",
+      title: "Habilidades técnicas",
       items: [
-        { title: "Arquitectura Backend", description: "Diseno de servicios desacoplados, APIs REST y sistemas orientados a dominio." },
+        { title: "Arquitectura Backend", description: "Diseño de servicios desacoplados, APIs REST y sistemas orientados a dominio." },
         { title: "Spring Ecosystem", description: "Spring Boot, Security, Data, Validation, Batch y Cloud en entornos productivos." },
-        { title: "Datos y Persistencia", description: "Modelado SQL, optimizacion de consultas, migraciones y transaccionalidad." },
-        { title: "Calidad y Testing", description: "JUnit, Mockito, tests de integracion y practicas para mantener sistemas confiables." },
+        { title: "Datos y Persistencia", description: "Modelado SQL, optimización de consultas, migraciones y transaccionalidad." },
+        { title: "Calidad y Testing", description: "JUnit, Mockito, tests de integración y prácticas para mantener sistemas confiables." },
         { title: "DevOps para Backend", description: "Docker, CI/CD y despliegues estables con observabilidad y control de errores." },
-        { title: "Seguridad", description: "JWT, OAuth2, RBAC, hardening y buenas practicas para proteger APIs." }
+        { title: "Seguridad", description: "JWT, OAuth2, RBAC, hardening y buenas prácticas para proteger APIs." }
       ]
     },
     projects: {
@@ -41,19 +41,19 @@ const translations = {
         {
           title: "E-commerce API",
           description:
-            "Plataforma de comercio con catalogo, inventario, ordenes y pagos; arquitectura lista para escalar por modulos.",
+            "Plataforma de comercio con catálogo, inventario, órdenes y pagos; arquitectura lista para escalar por modulos.",
           tech: ["Java", "Spring Boot", "MySQL", "Stripe", "Redis"]
         },
         {
           title: "Identity & Access Service",
           description:
-            "Servicio de autenticacion/autorizacion con JWT, refresh tokens, roles y auditoria para ecosistemas multi-app.",
+            "Servicio de autenticación/autorización con JWT, refresh tokens, roles y auditoría para ecosistemas multi-app.",
           tech: ["Spring Security", "JWT", "PostgreSQL", "OAuth2"]
         },
         {
           title: "Microservices Platform",
           description:
-            "Servicios independientes con discovery, API gateway, configuracion centralizada y resiliencia en fallos.",
+            "Servicios independientes con discovery, API gateway, configuración centralizada y resiliencia en fallos.",
           tech: ["Spring Cloud", "Eureka", "Docker", "Kubernetes", "RabbitMQ"]
         },
         {
@@ -72,14 +72,14 @@ const translations = {
           company: "EPAM Anywhere",
           period: "Mayo 2022 - Actualidad",
           description:
-            "Soporte y actualizacion de aplicaciones Dropwizard, migracion de Java 6 a Java 17. Implementacion de pipelines de datos con Kafka Connect para sincronizar y migrar bases de datos entre sistemas. DevOps con Jenkins y Spinnaker, Docker y AWS RDS."
+            "Soporte y actualización de aplicaciones Dropwizard, migración de Java 6 a Java 17. Implementación de pipelines de datos con Kafka Connect para sincronizar y migrar bases de datos entre sistemas. DevOps con Jenkins y Spinnaker, Docker y AWS RDS."
         },
         {
           role: "Senior Back-End Developer",
           company: "Global66",
           period: "Julio 2021 - Mayo 2022",
           description:
-            "Desarrollo del core bancario con funcionalidades transaccionales, migracion de monolito a microservicios, reportes con Jasper Reports y AWS Lambda."
+            "Desarrollo del core bancario con funcionalidades transaccionales, migración de monolito a microservicios, reportes con Jasper Reports y AWS Lambda."
         },
         {
           role: "Software Developer Senior",
@@ -93,28 +93,28 @@ const translations = {
           company: "Accenture",
           period: "Octubre 2019 - Enero 2021",
           description:
-            "Desarrollo de middleware con Message Broker en tecnologias IBM, implementacion de DevOps y CI/CD, refactorizacion de codigo de Java 6 a Java 8."
+            "Desarrollo de middleware con Message Broker en tecnologías IBM, implementación de DevOps y CI/CD, refactorización de código de Java 6 a Java 8."
         },
         {
           role: "Application Development Associate",
           company: "Accenture",
           period: "Octubre 2018 - Octubre 2019",
           description:
-            "Desarrollo de APIs RESTful con TDD, AWS y Docker, implementacion de DevOps y Web Services SOAP."
+            "Desarrollo de APIs RESTful con TDD, AWS y Docker, implementación de DevOps y Web Services SOAP."
         },
         {
           role: "Java Developer Junior",
           company: "ADA SA",
           period: "Diciembre 2017 - Octubre 2018",
           description:
-            "Desarrollo Full Stack con JSP (Java EE), Primefaces y Oracle Database, introduccion de CI/CD y TDD al equipo."
+            "Desarrollo Full Stack con JSP (Java EE), Primefaces y Oracle Database, introducción de CI/CD y TDD al equipo."
         }
       ]
     },
     contact: {
       title: "Hablemos",
       subtitle:
-        "Estoy abierto a oportunidades remotas o hibridas para backend Java/Spring Boot y proyectos de arquitectura de APIs.",
+        "Estoy abierto a oportunidades remotas o híbridas para backend Java/Spring Boot y proyectos de arquitectura de APIs.",
       nameLabel: "Nombre",
       namePlaceholder: "Tu nombre",
       emailLabel: "Correo",
@@ -122,13 +122,13 @@ const translations = {
       subjectLabel: "Asunto",
       subjectPlaceholder: "Necesito soporte backend",
       messageLabel: "Mensaje",
-      messagePlaceholder: "Cuentame sobre tu proyecto...",
+      messagePlaceholder: "Cuéntame sobre tu proyecto...",
       sendButton: "Enviar mensaje",
-      successTitle: "Mensaje enviado. Te respondere pronto.",
+      successTitle: "Mensaje enviado. Te responderé pronto.",
       errorTitle: "No se pudo enviar el mensaje. Intenta de nuevo."
     },
     footer: {
-      designedBy: "Disenado y construido por Jesus Torres",
+      designedBy: "Diseñado y construido por Jesus Torres",
       rights: "Todos los derechos reservados."
     }
   },
@@ -325,7 +325,7 @@ function renderCollections(copy) {
 
 function applyTranslations() {
   const copy = translations[language];
-  document.documentElement.lang = language;
+  document.documentElement.lang = language === "es" ? "es-CO" : language;
   langToggle.textContent = language === "es" ? "EN" : "ES";
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
