@@ -1,6 +1,9 @@
+---
+const base = import.meta.env.BASE_URL;
+---
 <header class="site-header" aria-label="Navegación principal">
   <a class="brand-link" href="#top" aria-label="Inicio Jesus Torres">
-    <span class="brand-mark" aria-hidden="true">JT</span>
+    <img class="brand-mark" src={`${base}brand/personal-mark.png`} alt="" width="44" height="29" aria-hidden="true" />
     <span class="brand-name">Jesus Torres</span>
   </a>
   <nav class="nav-links" aria-label="Secciones">

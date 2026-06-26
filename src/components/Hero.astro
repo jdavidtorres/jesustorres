@@ -1,5 +1,6 @@
 ---
 import { profile } from '@data/profile';
+const base = import.meta.env.BASE_URL;
 ---
 <section id="top" class="hero section-shell" aria-labelledby="hero-title">
   <div class="hero-content">
@@ -14,10 +15,7 @@ import { profile } from '@data/profile';
     </div>
   </div>
   <div class="hero-visual" aria-hidden="true">
-    <div class="hero-signature">
-      <span>JT</span>
-      <p>Backend Java</p>
-    </div>
+    <img class="hero-mark" src={`${base}brand/personal-mark.png`} alt="" width="520" height="340" />
     <div class="metric-grid">
       {profile.stats.map((stat) => (
         <span><strong>{stat.value}</strong>{stat.label}</span>
