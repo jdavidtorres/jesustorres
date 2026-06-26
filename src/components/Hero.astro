@@ -1,0 +1,27 @@
+---
+import { profile } from '@data/profile';
+const base = import.meta.env.BASE_URL;
+---
+<section id="top" class="hero section-shell" aria-labelledby="hero-title">
+  <div class="hero-content">
+    <p class="eyebrow">Hola, soy</p>
+    <h1 id="hero-title">{profile.name}</h1>
+    <p class="role">{profile.role}</p>
+    <p class="headline">{profile.headline}</p>
+    <p class="hero-summary">{profile.summary}</p>
+    <div class="hero-actions" aria-label="Main actions">
+      <a class="button primary" href="#experience">Ver experiencia</a>
+      <a class="button ghost" href={`mailto:${profile.email}`}>Contactar</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="symbol-frame">
+      <img src={`${base}brand/personal-symbol.png`} alt="" width="520" height="224" />
+    </div>
+    <div class="metric-grid">
+      {profile.stats.map((stat) => (
+        <span><strong>{stat.value}</strong>{stat.label}</span>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import { caseStudies } from '@data/profile';
+---
+<section id="cases" class="section-shell" aria-labelledby="cases-title">
+  <div class="section-heading narrow">
+    <p class="section-kicker">Build</p>
+    <h2 id="cases-title">Proyectos destacados</h2>
+    <p>Resumen técnico de trabajos representativos sin exponer detalles sensibles de clientes.</p>
+  </div>
+  <div class="case-grid">
+    {caseStudies.map((item, index) => (
+      <article class="case-card">
+        <span class="case-number">0{index + 1}</span>
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+        <div class="tag-list compact">
+          {item.stack.map((tag) => <span>{tag}</span>)}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

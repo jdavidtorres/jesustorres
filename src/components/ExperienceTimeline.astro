@@ -1,0 +1,31 @@
+---
+import { experience } from '@data/profile';
+---
+<section id="experience" class="section-shell" aria-labelledby="experience-title">
+  <div class="section-heading">
+    <p class="section-kicker">Experiencia</p>
+    <h2 id="experience-title">Trayectoria profesional</h2>
+    <p>Experiencia corporativa en backend, integración, banca, DevOps y plataformas empresariales.</p>
+  </div>
+  <div class="timeline">
+    {experience.map((item) => (
+      <article class="experience-card">
+        <div class="card-meta">
+          <span>{item.period}</span>
+          <span>{item.location}</span>
+        </div>
+        <div class="experience-main">
+          <h3>{item.company}</h3>
+          <p class="card-role">{item.role}</p>
+          <p>{item.summary}</p>
+          <ul>
+            {item.highlights.map((highlight) => <li>{highlight}</li>)}
+          </ul>
+          <div class="tag-list" aria-label={`${item.company} stack`}>
+            {item.stack.map((tag) => <span>{tag}</span>)}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

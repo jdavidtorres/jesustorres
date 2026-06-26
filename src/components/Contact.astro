@@ -1,0 +1,21 @@
+---
+import { profile } from '@data/profile';
+---
+<section id="contact" class="section-shell contact-section" aria-labelledby="contact-title">
+  <div>
+    <p class="section-kicker">Contacto</p>
+    <h2 id="contact-title">Hablemos de backend, APIs y plataformas Java.</h2>
+    <p>
+      Estoy abierto a oportunidades remotas o híbridas para backend Java/Spring Boot y proyectos de arquitectura de APIs.
+    </p>
+  </div>
+  <div class="contact-card">
+    <p class="contact-name">{profile.name}</p>
+    <a class="contact-email" href={`mailto:${profile.email}`}>{profile.email}</a>
+    <div class="contact-links">
+      {profile.links.map((link) => (
+        <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+      ))}
+    </div>
+  </div>
+</section>

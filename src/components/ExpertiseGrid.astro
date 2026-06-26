@@ -1,0 +1,21 @@
+---
+import { expertise } from '@data/profile';
+---
+<section id="expertise" class="section-shell" aria-labelledby="expertise-title">
+  <div class="section-heading narrow">
+    <p class="section-kicker">Core</p>
+    <h2 id="expertise-title">Habilidades técnicas</h2>
+    <p>Capacidades agrupadas por dominio de ingeniería.</p>
+  </div>
+  <div class="expertise-grid">
+    {expertise.map((item) => (
+      <article class="domain-card">
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+        <div class="tag-list compact">
+          {item.items.map((skill) => <span>{skill}</span>)}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

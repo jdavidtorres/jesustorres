@@ -1,0 +1,43 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@components/Header.astro';
+import Hero from '@components/Hero.astro';
+import About from '@components/About.astro';
+import ExperienceTimeline from '@components/ExperienceTimeline.astro';
+import ExpertiseGrid from '@components/ExpertiseGrid.astro';
+import CaseStudies from '@components/CaseStudies.astro';
+import Contact from '@components/Contact.astro';
+import Footer from '@components/Footer.astro';
+import { profile } from '@data/profile';
+import { site } from '@data/site';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  jobTitle: profile.role,
+  email: profile.email,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Medellín',
+    addressCountry: 'CO'
+  },
+  sameAs: profile.links.map((link) => link.href),
+  description: site.description
+};
+---
+<BaseLayout>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <div class="site-bg">
+    <Header />
+    <main>
+      <Hero />
+      <About />
+      <ExperienceTimeline />
+      <ExpertiseGrid />
+      <CaseStudies />
+      <Contact />
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>
