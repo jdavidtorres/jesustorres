@@ -104,9 +104,17 @@ a {
   gap: 10px;
 }
 
-.brand-link img {
-  width: 42px;
-  opacity: 0.95;
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(170, 179, 192, 0.2);
+  border-radius: 50%;
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.045);
 }
 
 .brand-name {
@@ -283,28 +291,32 @@ h3 {
     260px 126px 0 rgba(10, 64, 91, 0.9);
 }
 
-.symbol-frame {
+.hero-signature {
   position: absolute;
-  inset: 8% 0 auto auto;
+  top: 12%;
+  right: 0;
   z-index: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: min(100%, 560px);
-  min-height: 340px;
-  padding: 38px;
-  border: 1px solid rgba(170, 179, 192, 0.16);
-  border-radius: var(--radius-lg);
-  background:
-    linear-gradient(135deg, rgba(20, 30, 48, 0.92), rgba(71, 87, 107, 0.16)),
-    rgba(255, 255, 255, 0.045);
-  box-shadow: var(--shadow-soft);
+  width: min(100%, 520px);
+  min-height: 300px;
+  color: var(--color-text);
 }
 
-.symbol-frame img {
-  width: min(84%, 430px);
-  opacity: 0.9;
-  mix-blend-mode: screen;
+.hero-signature span {
+  font-size: clamp(7rem, 16vw, 13rem);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: 0;
+}
+
+.hero-signature p {
+  margin: 18px 0 0;
+  color: #dce6f5;
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  font-weight: 800;
 }
 
 .metric-grid {
@@ -599,7 +611,7 @@ h3 {
     min-height: 420px;
   }
 
-  .symbol-frame {
+  .hero-signature {
     inset: 0 auto auto 0;
     width: 100%;
   }
@@ -645,9 +657,8 @@ h3 {
     min-height: 360px;
   }
 
-  .symbol-frame {
+  .hero-signature {
     min-height: 270px;
-    padding: 24px;
   }
 
   .metric-grid {
