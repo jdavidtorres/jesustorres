@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Jesus Torres',
   role: 'Java + Spring Boot Backend Developer',
-  headline: 'Java 21 · Spring Boot · APIs REST · Microservices · Cloud',
+  headline: 'Java · Spring Boot · APIs REST · Microservices · Cloud',
   summary:
     'Construyo sistemas backend robustos, escalables y seguros con Java y el ecosistema Spring, desde APIs REST hasta arquitectura de microservicios.',
   location: 'Medellín, Colombia',
@@ -17,7 +17,7 @@ export const profile = {
     { value: '99.9%', label: 'Objetivo de disponibilidad' }
   ],
   coreStack: [
-    'Java 21',
+    'Java',
     'Spring Boot',
     'Spring Security',
     'Spring Data JPA',
